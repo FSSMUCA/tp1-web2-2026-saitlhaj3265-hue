@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculateur de cercle</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        div { margin: 10px 0; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Calculatrice de cercle</h1>
+    
+    <div id="rayon"></div>
+    <div id="perimetre"></div>
+    <div id="surface"></div>
+
+    <script>
+        const PI = Math.PI;
+        
+        let saisie = prompt("Entrez le rayon du cercle (en cm) :");
+        
+        if (saisie === null) {
+            saisie = "0";
+            alert("Rayon par défaut : 0 cm");
+        }
+        
+        let rayon = Number(saisie);
+        
+        if (isNaN(rayon)) {
+            rayon = 0;
+            alert("Valeur incorrecte, rayon mis à 0");
+        }
+        
+        let perimetre = 2 * PI * rayon;
+        let surface = PI * rayon * rayon;
+        
+        document.getElementById("rayon").innerHTML = `Rayon : ${rayon} cm`;
+        document.getElementById("perimetre").innerHTML = `Périmètre : ${perimetre.toFixed(2)} cm`;
+        document.getElementById("surface").innerHTML = `Surface : ${surface.toFixed(2)} cm²`;
+        
+        console.log(`Rayon: ${rayon} cm`);
+        console.log(`Périmètre: ${perimetre.toFixed(2)} cm`);
+        console.log(`Surface: ${surface.toFixed(2)} cm²`);
+        
+        console.log("Test toFixed(2) :", (3.14159).toFixed(2)); 
+    </script>
+</body>
+</html>

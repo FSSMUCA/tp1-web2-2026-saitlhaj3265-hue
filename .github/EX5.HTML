@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercice 5 - DOM</title>
+</head>
+<body>
+    <h1>Ma fiche de présentation</h1>
+    
+    <p id="nomComplet">...</p>
+    <p id="age">...</p>
+    <p id="ville">...</p>
+    <p id="presentation">...</p>
+
+    <script>
+        let prenom = "Mariem";
+        let nom = "Alaoui";
+        let age = 25;
+        let ville = "Casablanca";
+        
+        document.title = "Fiche de " + prenom;
+        
+        document.getElementById("nomComplet").innerHTML = `${prenom} ${nom}`;
+        document.getElementById("age").innerHTML = `Âge : ${age} ans`;
+        document.getElementById("ville").innerHTML = `Ville : ${ville}`;
+        
+        document.getElementById("presentation").innerHTML = 
+            `Je m'appelle ${prenom} ${nom}, j'ai ${age} ans et j'habite à ${ville}.`;
+        
+            </script>
+</body>
+</html>
