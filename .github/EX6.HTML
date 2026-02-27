@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercice 6 - Correction</title>
+</head>
+<body>
+    <h1>Exercice 6</h1>
+    <p>Correction des erreurs de nommage - Voir console</p>
+
+    <script>
+        
+        let premierPrix = 100;          
+        let deuxiemePrix = 80;          
+        let prixMinimum = 50;             
+        let valeur = 200;               
+        let prixMaximum = 300;             
+        let prixMoyen = (premierPrix + deuxiemePrix + prixMinimum + valeur + prixMaximum) / 5;
+        
+        console.log("Prix moyen :", prixMoyen);
+        console.log("Le prix minimum est :", prixMinimum);
+        console.log("Le prix maximum est :", prixMaximum);
+        
+        console.log("Détail des prix :", {
+            premier: premierPrix,
+            deuxieme: deuxiemePrix,
+            minimum: prixMinimum,
+            valeur: valeur,
+            maximum: prixMaximum,
+            moyenne: prixMoyen
+        });
+    </script>
+</body>
+</html>

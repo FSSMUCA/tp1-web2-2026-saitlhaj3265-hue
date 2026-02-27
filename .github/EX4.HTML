@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercice 4 - Interaction</title>
+</head>
+<body>
+    <h1>Exercice 4</h1>
+    <p>Interagissez avec les boîtes de dialogue</p>
+
+    <script>
+        let prenom = prompt("Quel est votre prénom ?");
+        
+        if (prenom === null) {
+            prenom = "Inconnu";
+        }
+        
+        let ageSaisi = prompt("Quel est votre âge ?");
+        
+        if (ageSaisi === null) {
+            ageSaisi = "0";
+        }
+        
+        let age = Number(ageSaisi);
+        
+        let anneeNaissance = 2025 - age;
+        
+        alert(`Bonjour ${prenom} ! Vous êtes né(e) vers ${anneeNaissance}.`);
+        
+        let afficherConsole = confirm("Voulez-vous afficher vos informations dans la console ?");
+        
+        if (afficherConsole === true) {
+            console.log("Prénom :", prenom);
+            console.log("Âge :", age);
+            console.log("Année de naissance :", anneeNaissance);
+        } else {
+            console.log("Affichage refusé par l'utilisateur");
+        }
+    </script>
+</body>
+</html>
